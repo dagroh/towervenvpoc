@@ -1,0 +1,12 @@
+---
+- name: display ansible version
+  hosts: localhost
+
+  tasks:
+    - name: register ansible version
+      shell: "ansible --version"
+      register: r_version
+    
+    - name: display version
+      debug:
+        msg: "{{ r_version.stdout }}"
