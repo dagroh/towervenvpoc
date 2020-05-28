@@ -1,8 +1,6 @@
 ---
 - name: display ansible version
   hosts: localhost
-  become: true
-  remote_user: root
 
   tasks:
     - name: register ansible version
